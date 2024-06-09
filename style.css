@@ -1,0 +1,136 @@
+* {
+   
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+}
+
+body {
+   
+   background-color: #B500FF;
+   color: white;
+   
+   
+}
+
+#banner {
+   
+   height: 39vh;
+   margin: 0.3vh;
+   margin-top:0;
+   box-shadow: 4px 8px 13px black;
+   
+   
+   
+}
+
+nav {
+   
+   background-color: black;
+   padding: 2vh;
+   
+   
+}
+
+p {
+   
+   font-weight: bold;
+   font-size: 18px;
+   color: white;
+   position: absolute;
+   top: 15vh;
+   left: 0.5vh;
+   
+   
+}
+
+button {
+   
+   background-color: #AD62CB;
+   color: white;
+   font-weight: bold;
+   padding: 2vh;
+   border: none;
+   border-radius: 2vh;
+   
+   
+}
+
+#tec {
+   
+
+   
+}
+        
+        #tec img {
+           
+           
+           height: 30vh;
+           
+        }
+        
+        #pedido {
+           
+          background-color: white;
+          color: black;
+          
+          padding: 10px;
+          
+          border-top-left-radius: 2vh;
+          width: 80%;
+          
+          position: relative;
+          left: 12vh;
+          
+          margin-bottom: 2vh;
+          
+          
+           
+           
+        }
+        
+        #Eu {
+           
+           justify-content: space-evenly;
+           
+        }
+        
+        #Eu img {
+           
+           height: 30vh;
+           border-radius: 50%;
+           
+           
+        }
+        
+        
+        dialog {
+           
+           border: none;
+           outline: none;
+           border-radius: 5vh;
+           padding: 5vh;
+           
+           text-align: center;
+           
+           margin-left: auto;
+           margin-right: auto;
+           
+        }
+        
+           
+           
+        textarea, input {
+           
+           
+           background-color: lightgray;
+           color: black;
+           font-weight: bold;
+           border: none;
+           border-radius: 20px;
+           outline: none;
+           padding: 10px;
+           
+           
+        }
