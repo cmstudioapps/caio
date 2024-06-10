@@ -10,18 +10,18 @@
 </head>
 <body>
    <img id="banner" src="PC.png" alt="">
-   
+
    <p>Quer criar um Aplicativo para sua loja, barbearia, Escola ou qualquer outro tipo de serviços?<br>Clique abaixo e faça o pedido!</p>
-   
+
    <br><br>
-   
+
    <div id="pedido">
       <h3 style="font-weight: bold;">Envie uma mensagem:</h3>
       <button onclick="Pedir()">Fazer um Pedido</button>
    </div>
-   
+
    <dialog>
-      <form action="https://formsubmit.co/scaio5428@gmail.com" method="post">
+      
          <h3>Explique que tipo de aplicativo você quer, seu tipo de empresa e seu orçamento para o projeto:</h3>
          <br>
          <textarea id="msg" cols="30" rows="10" placeholder="Escreva aqui..." required></textarea>
@@ -35,11 +35,15 @@
             <option value="100+">100+</option>
          </datalist>
          <br><br>
-         <h3>Seu WhatsApp:</h3>
-         <input id="wp" type="number" placeholder="Seu número..." required>
+         
+         
+         <h3>Seu WhatsApp: (inclua o DDD)</h3>
+         
+         <br>
+         <input id="wp" type="text" value="+55" placeholder="Seu número..." required>
          <br><br>
-         <button type="submit">Concluir</button>
-      </form>
+     <button onclick="concluir()">Concluir</button>
+      
    </dialog>
 
    <br><br><br>
@@ -47,14 +51,14 @@
    <div id="tec">
       <img src="tec.png" alt="tec.png">
    </div>
-   
+
    <br><br>
    <h2>Sobre mim:</h2>
    <div id="Eu">
       <img src="Euu.png" alt="">
       <strong>Migrei do desenvolvimento de jogos para desenvolvimento web a 1 ano.<br>Me especializei nas tecnologias mais populares do mundo: HTML5, CSS3 e JAVASCRIPT.</strong>
    </div>
-   
+
    <script src="main.js"></script>
 </body>
 </html>
