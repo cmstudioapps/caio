@@ -65,3 +65,10 @@ function compartilhar() {
    
    
 }
+
+
+window.addEventListener("contextmenu", function(e) {
+
+e.preventDefault()
+
+})
