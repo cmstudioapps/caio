@@ -1,51 +1,49 @@
-document.addEventListener("DOMContentLoaded", function() {
-  let form = document.querySelector("form");
-  let _subject = "Novo cliente!";
-  
-  if (form) {
-    form.addEventListener("submit", function(event) {
-      event.preventDefault();
+let dialog = document.querySelector("dialog")
+
+function Pedir() {
+   
+   dialog.showModal()
+   
+   
+}
+
+
+function concluir() {
+   
+   let _subject = "🔴 Novo cliente!"
+   
+   let contato = `https://wa.me/${Number(document.getElementById("wp").value)}`
+   
+   let orçamento = document.getElementById("orçamento").value
+   
+   let mensagem = document.getElementById("msg").value + " O orçamento é de "+orçamento
+   
+   dialog.innerHTML = "<h2>Aguarde um pouco...</h2>"
+   
+   fetch("https://formsubmit.co/ajax/scaio5428@gmail.com", {
       
-      let dialog = document.querySelector("dialog");
-      if (dialog) {
-        dialog.innerHTML = "Aguarde...";
-      }
-
-     
-      let orçamento = document.getElementById("orçamento").value;
-      let tel = document.getElementById("wp").value
-      let menssagem = document.getElementById("msg").value;
+      method: "post",
+      body: new URLSearchParams({
+         
+       _subject,  mensagem, contato
+         
+      })
       
-      fetch("https://formsubmit.co/ajax/scaio5428@gmail.com", {
-        method: "post",
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          menssagem, _subject,tel,orçamento
-        })
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (dialog) {
-          dialog.innerHTML = "<h2>Enviado com sucesso!</h2>";
-        }
-      })
-      .catch(error => {
-        if (dialog) {
-          dialog.innerHTML = "<h2>Erro ao enviar!</h2>";
-        }
-        console.error("Erro:", error);
-      });
-    });
-  }
+      
+      
+   })
 
-  window.Pedir = function() {
-    let dialog = document.querySelector("dialog");
-    if (dialog) {
-      dialog.showModal();
-    }
-  };
+   .then(response => response.json())
+   .then(data => {
+      
+      dialog.innerHTML = "<h2>Tudo pronto!<br>Entraremos em contato assim que possivel!😊</h2>"
+      
+   })
+   .catch(error => {
+      
+      dialog.innerHTML = "<h2>Ocorreu um erro, tente mais uma vez...</h2>"
+      console.error(error)
+      
+   })
+}
 
-  window.addEventListener("contextmenu", function(e) {
-    e.preventDefault();
-  });
-});
