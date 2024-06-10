@@ -47,3 +47,21 @@ function concluir() {
    })
 }
 
+function compartilhar() {
+   
+   navigator.share({
+      
+      title: "Caio multiversando",
+      text: "Precisando de um aplicativo para sua loja, barbearia ou qualquer outro negocio? *É SÓ PEDIR!* >Acesse agora o site e peça! " + window.location.href
+      
+      
+   })
+   .then(() => {
+      
+      alert("Muito obrigado por compartilhar nossos serviços!!")
+      
+      
+   })
+   
+   
+}
