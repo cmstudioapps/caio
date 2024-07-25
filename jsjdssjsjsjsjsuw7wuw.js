@@ -1,4 +1,5 @@
 function postar() {
+
    
    if(vezes <= 5) {
    
